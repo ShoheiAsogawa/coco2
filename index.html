@@ -33,38 +33,50 @@
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
 
 <style>
-/* CocoCrewロゴのカスタムスタイル */
-.cococrew-logo {
-    margin-left: 20px;
+/* ヒーローロゴエリアのスタイル */
+.hero-logos {
+    padding: 40px 0;
+}
+
+.logo-link {
+    transition: transform 0.3s ease, opacity 0.3s ease;
     display: inline-block;
-    transition: opacity 0.3s ease;
 }
 
-.cococrew-logo:hover {
-    opacity: 0.8;
+.logo-link:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
-.cococrew-logo img {
-    height: 30px;
-    width: auto;
+/* ロゴ画像の調整 */
+.hero-logos img, 
+.logo-area img {
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-logos img:hover, 
+.logo-area img:hover {
+    transform: scale(1.02);
 }
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-    .cococrew-logo {
-        margin-left: 10px;
+    .hero-logos {
+        padding: 20px 0;
+        min-height: 200px !important;
     }
     
-    .cococrew-logo img {
-        height: 25px;
+    .hero-logos img {
+        max-height: 100px !important;
     }
 }
 
-/* luxbar-headerの調整 */
-.luxbar-header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+@media (max-width: 576px) {
+    .hero-logos img {
+        max-height: 80px !important;
+    }
 }
 </style>
 
@@ -128,10 +140,6 @@
         <ul class="luxbar-navigation">
           <li class="luxbar-header"> 
             <a href="index.html" class="luxbar-brand">CocoColor</a>
-            <!-- CocoCrewロゴを追加 -->
-            <a href="https://cococrew.ccc-ivory.com" class="cococrew-logo" target="_blank" title="CocoCrew">
-              <img src="assets/img/common/cococrew-logo.png" alt="CocoCrew" />
-            </a>
             <label class="luxbar-hamburger luxbar-hamburger-doublespin"
                         for="luxbar-checkbox"> <span></span> </label>
           </li>
@@ -148,20 +156,45 @@
       </div>
     </div>
   </nav>
+    <!-- モバイル版ヒーローセクション -->
     <div class="d-block d-lg-none d-sm-block my-5">
 		<div class="container">
-		<img src="assets/img/common/hero.png" class="img-fluid d-block mb-5" alt="" >
+            <!-- ロゴエリアを2分割 -->
+            <div class="row mb-5">
+                <div class="col-6 text-center">
+                    <img src="assets/img/common/cococolor-logo.png" class="img-fluid" alt="CocoColor" style="max-height: 120px;">
+                </div>
+                <div class="col-6 text-center">
+                    <a href="https://cococrew.ccc-ivory.com" target="_blank">
+                        <img src="assets/img/common/cococrew-logo.png" class="img-fluid" alt="CocoCrew" style="max-height: 120px;">
+                    </a>
+                </div>
+            </div>
             <a href="contact/contact.html" class="btn btn-custom btn-lg d-block">体験・見学を申し込む</a>
 			<a href="https://www.instagram.com/cococolor2022/" target="_blank"><img src="assets/img/lowerPage/instagram.png" class="img-fluid" alt="Instagram"></a>
 			<a href="https://www.facebook.com/profile.php?id=100077639620464" target="_blank"><img src="assets/img/lowerPage/facebook.png" alt="facebook" width="56" class="img-fluid"></a>
 		</div>
 	</div>
+    
+    <!-- デスクトップ版ヒーローセクション -->
     <div class="container-fluid d-none d-sm-none d-lg-block">
-	<div class="hero d-flex align-items-center mb-5 row">
-       <div class="text-left mx-5 bottom"><a href="contact/contact.html" class="btn btn-custom btn-lg">体験・見学を申し込む</a></div>
-	   <div class="custom002"><a href="https://www.instagram.com/cococolor2022/" target="_blank"><img src="assets/img/lowerPage/instagram.png" class="img-fluid" alt="Instagram"></a></div>
-	   <div class="custom003"><a href="https://www.facebook.com/profile.php?id=100077639620464" target="_blank"><img src="assets/img/lowerPage/facebook.png" alt="facebook" width="56" class="img-fluid"></a></div>
-    </div>
+        <div class="hero-logos d-flex align-items-center justify-content-center mb-5" style="min-height: 300px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+            <div class="row w-100 align-items-center">
+                <div class="col-6 text-center">
+                    <img src="assets/img/common/cococolor-logo.png" class="img-fluid" alt="CocoColor" style="max-height: 200px;">
+                </div>
+                <div class="col-6 text-center">
+                    <a href="https://cococrew.ccc-ivory.com" target="_blank" class="logo-link">
+                        <img src="assets/img/common/cococrew-logo.png" class="img-fluid" alt="CocoCrew" style="max-height: 200px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero d-flex align-items-center mb-5 row">
+           <div class="text-left mx-5 bottom"><a href="contact/contact.html" class="btn btn-custom btn-lg">体験・見学を申し込む</a></div>
+           <div class="custom002"><a href="https://www.instagram.com/cococolor2022/" target="_blank"><img src="assets/img/lowerPage/instagram.png" class="img-fluid" alt="Instagram"></a></div>
+           <div class="custom003"><a href="https://www.facebook.com/profile.php?id=100077639620464" target="_blank"><img src="assets/img/lowerPage/facebook.png" alt="facebook" width="56" class="img-fluid"></a></div>
+        </div>
     </div>
 </header>
 <main>
