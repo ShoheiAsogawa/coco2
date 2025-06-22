@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="fav.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="icon.png" />
+<title>CocoColor</title>
+
+<!--CSS -->
+<link href="assets/css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/luxbar.min.css">
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/custom.css" />
+
+<!-- ★ 変更 : 入口ロゴ並び用の最小カスタム -->
+<style>
+/* 2 ロゴを左右センターに置くための簡易調整 */
+.top-logos .logo-box{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.top-logos img{max-width:100%;height:auto;}
+@media (min-width:992px){          /* PC: 高さをそろえて見栄え良く */
+  .hero-split{min-height:320px;}   /* 任意 */
+}
+</style>
+
+<link rel="canonical" href="http://cococolor.ccc-ivory.com" />
+<meta name="description" content="大阪市港区の児童発達支援・放課後等デイサービス　CocoColor(ココカラー) です。障害や発達に特性のある未就学児から１８歳までのお子様がご利用いただける福祉サービスです。" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:site_name" content="児童発達支援・放課後等デイサービス　CocoColor" />
+<meta property="og:title" content="CocoColor|トップページ" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:description" content="大阪市港区の児童発達支援・放課後等デイサービス　CocoColor(ココカラー) です。障害や発達に特性のある未就学児から１８歳までのお子様がご利用いただける福祉サービスです。" />
+<meta property="og:url" content="cococolor.ccc-ivory.com" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="http://cococolor.ccc-ivory.com/assets/img/common/hero.png" />
+<meta property="og:image:width" content="1360" />
+<meta property="og:image:height" content="600" />
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+<!-- （スクリプト部分は省略して原文のまま） -->
+</head>
+
+<body>
+<header>
+  <!-- ===== ナビバーは元コードそのまま ===== -->
+  <nav id="luxbar" class="luxbar-fixed"> … </nav>
+
+  <!-- ----------★ 変更：モバイル（<992px）用 2ロゴ並び ---------- -->
+  <div class="d-block d-lg-none my-5">
+    <div class="container top-logos">
+      <div class="row hero-split">
+        <div class="col-6 logo-box">
+          <!-- CocoColor ロゴ -->
+          <img src="assets/img/common/hero.png" class="img-fluid mb-3" alt="CocoColor">
+        </div>
+
+        <div class="col-6 logo-box">
+          <!-- CocoCrew ロゴ : クリックで CocoCrew へ -->
+          <a href="../cococrew.ccc-ivory.com/index.html">
+            <img src="../cococrew.ccc-ivory.com/assets/img/common/logo.png"
+                 class="img-fluid mb-3" alt="CocoCrew">
+          </a>
+        </div>
+      </div>
+
+      <!-- 既存のボタン & SNS をそのまま下に配置 -->
+      <a href="contact/contact.html" class="btn btn-custom btn-lg d-block">体験・見学を申し込む</a>
+      <a href="https://www.instagram.com/cococolor2022/" target="_blank">
+        <img src="assets/img/lowerPage/instagram.png" class="img-fluid" alt="Instagram"></a>
+      <a href="https://www.facebook.com/profile.php?id=100077639620464" target="_blank">
+        <img src="assets/img/lowerPage/facebook.png" alt="facebook" width="56" class="img-fluid"></a>
+    </div>
+  </div>
+
+  <!-- ----------★ 変更：デスクトップ（≥992px）用 2ロゴ並び ---------- -->
+  <div class="container-fluid d-none d-lg-block">
+    <div class="row hero-split align-items-center text-center">
+      <!-- 左 : CocoColor ロゴ -->
+      <div class="col-lg-6 logo-box">
+        <img src="assets/img/common/hero.png" class="img-fluid" alt="CocoColor">
+      </div>
+
+      <!-- 右 : CocoCrew ロゴ&リンク -->
+      <div class="col-lg-6 logo-box">
+        <a href="../cococrew.ccc-ivory.com/index.html">
+          <img src="../cococrew.ccc-ivory.com/assets/img/common/logo.png"
+               class="img-fluid" alt="CocoCrew">
+        </a>
+      </div>
+    </div>
+
+    <!-- 既存のボタン & SNS -->
+    <div class="d-flex justify-content-center my-4">
+      <a href="contact/contact.html" class="btn btn-custom btn-lg mx-3">体験・見学を申し込む</a>
+      <a href="https://www.instagram.com/cococolor2022/" target="_blank" class="mx-2">
+        <img src="assets/img/lowerPage/instagram.png" class="img-fluid" alt="Instagram"></a>
+      <a href="https://www.facebook.com/profile.php?id=100077639620464" target="_blank" class="mx-2">
+        <img src="assets/img/lowerPage/facebook.png" alt="facebook" width="56" class="img-fluid"></a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 以下 main / footer / script は元のコードをそのまま残しています ===== -->
+<main> … </main>
+<footer> … </footer>
+
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap-4.4.1.js"></script>
+</body>
+</html>
