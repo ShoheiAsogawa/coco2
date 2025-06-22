@@ -31,6 +31,43 @@
 <!-- font -->
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+
+<style>
+/* CocoCrewロゴのカスタムスタイル */
+.cococrew-logo {
+    margin-left: 20px;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.cococrew-logo:hover {
+    opacity: 0.8;
+}
+
+.cococrew-logo img {
+    height: 30px;
+    width: auto;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .cococrew-logo {
+        margin-left: 10px;
+    }
+    
+    .cococrew-logo img {
+        height: 25px;
+    }
+}
+
+/* luxbar-headerの調整 */
+.luxbar-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+</style>
+
 <script type="text/javascript">
             const base = location.host.indexOf('localhost') === -1 ? '/blog' : ''; 
 
@@ -89,7 +126,12 @@
       <input type="checkbox" id="luxbar-checkbox" class="luxbar-checkbox">
       <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
         <ul class="luxbar-navigation">
-          <li class="luxbar-header"> <a href="index.html" class="luxbar-brand">CocoColor</a>
+          <li class="luxbar-header"> 
+            <a href="index.html" class="luxbar-brand">CocoColor</a>
+            <!-- CocoCrewロゴを追加 -->
+            <a href="https://cococrew.ccc-ivory.com" class="cococrew-logo" target="_blank" title="CocoCrew">
+              <img src="assets/img/common/cococrew-logo.png" alt="CocoCrew" />
+            </a>
             <label class="luxbar-hamburger luxbar-hamburger-doublespin"
                         for="luxbar-checkbox"> <span></span> </label>
           </li>
